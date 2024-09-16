@@ -15,7 +15,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
+<% docker_port = IO.popen(%w[docker compose port mysql 3306], "r", &:read).chomp.split(":").last %>
+<% if docker_port %>
+  host: 127.0.0.1
+  port: <%= docker_port %>
+<% else %>
   host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+<% end %>
 
 development:
   <<: *default
