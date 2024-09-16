@@ -18,5 +18,8 @@ end
 
 group :test do
   gem "brakeman", group: :development, require: false
+  gem "factory_bot_rails", group: :development
+  gem "faker", group: :development
+  gem "rspec-rails", group: :development
   gem "rubocop-rails-omakase", group: :development, require: false
 end
