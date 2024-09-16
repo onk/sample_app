@@ -258,14 +258,13 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  puma (>= 5.0)
-  rails (~> 7.2.1)
+  puma
+  rails (= 7.2.1)
   rubocop-rails-omakase
   sprockets-rails
   stimulus-rails
-  trilogy (~> 2.7)
+  trilogy
   turbo-rails
-  tzinfo-data
   web-console
 
 BUNDLED WITH
