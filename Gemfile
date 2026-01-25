@@ -1,13 +1,18 @@
 source "https://rubygems.org"
 
-gem "rails", "7.2.1"
+gem "rails", "8.1.2"
 
 gem "bootsnap", require: false
+gem "image_processing"
 gem "importmap-rails"
 gem "jbuilder"
+gem "kamal", require: false
+gem "propshaft"
 gem "puma"
-gem "sprockets-rails"
+gem "solid_cache"
+gem "solid_queue"
 gem "stimulus-rails"
+gem "thruster", require: false
 gem "trilogy"
 gem "turbo-rails"
 
@@ -18,6 +23,7 @@ end
 
 group :test do
   gem "brakeman", group: :development, require: false
+  gem "bundler-audit", group: :development, require: false
   gem "factory_bot_rails", group: :development
   gem "faker", group: :development
   gem "rspec-rails", group: :development
